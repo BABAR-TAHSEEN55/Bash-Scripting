@@ -1,0 +1,6 @@
+name="BatBiting Superman"
+echo "My Current name : ${name}"
+echo "Sytem date and time : $(date)"
+echo "Your username is : ${USER}"
+echo "You are currently using ${SHELL} shell"
+echo "You are in $(pwd) path "
