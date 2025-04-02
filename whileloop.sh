@@ -1,12 +1,12 @@
 #!/usr/bin/bash
 
-# mynum=1
-#
-# while [[ $mynum -le 10 ]]; do
-#   echo $mynum
-#   mynum=$((mynum + 1))
-#   sleep 1
-# done
+mynum=1
+
+while [[ $mynum -le 10 ]]; do
+  echo $mynum
+  mynum=$((mynum + 1))
+  sleep 1
+done
 
 while [ -f ~/testfile ]; do
   echo "As of $(date) , File exists"
