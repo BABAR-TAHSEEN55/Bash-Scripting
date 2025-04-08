@@ -1,6 +1,8 @@
 In Linux Everything is a file !!!!
-go check cd /
+For example , 
+go into cd /  
+then do , 
 cd bin
-and you can find even commands like ls and Everything is a file
+and you  can find  commands like ls , cat etc  is a file
 
 - Bin Contains all the command binaries
