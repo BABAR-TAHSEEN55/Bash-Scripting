@@ -20,3 +20,4 @@ while [[ $i -lt ${#var} ]]; do
   ((i++))
 done
 ## In Strings you have to use normal comparison Operators
+#TODO : Count numbers of Vowels
