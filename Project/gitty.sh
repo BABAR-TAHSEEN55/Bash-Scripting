@@ -23,7 +23,7 @@ if command -v gh &>/dev/null; then
     echo " ⚡ Running git init..."
     git init
     AssignVisibilityName
-    gh repo create "$projectName" --"$response" --source=. --remote=origin --push
+    gh repo create "$projectName" --"$response" --source=. --remote=origin
   fi
 else
   echo " ❌ You need to install GitHub CLI first."
