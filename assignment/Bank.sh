@@ -7,7 +7,14 @@ while :; do
   echo "2. Withdraw"
   echo "3.Find Balance"
   echo "4.Exit"
+
   read -p "Enter your choice: " choice
+  if [[ $choice -ge 5 ]]; then
+    echo "Please enter a valid choice (1-4) "
+  elif ! [[ -z $choice ]]; then
+    echo "Strings are not allowed . Please enter a following Number "
+  fi
+
   if [[ $choice -eq 1 ]]; then
     read -p "Enter Amount to be deposited: " amount
     ((deposit = deposit + amount))
@@ -26,13 +33,13 @@ while :; do
       echo "Balance : ${deposit}"
     fi
 
-    echo "Withdrawn amount Succesfully : ${withdraw}"
+    echo "Withdrawn amount Succesfully"
   elif [[ $choice -eq 3 ]]; then
     echo "Remaining balance : ${deposit}"
   elif [[ $choice -eq 4 ]]; then
+    echo "Thank-You for using Bash Bank 🏦🏦💸 "
     exit 0
   fi
 done
 # $((2+2)) will work but $((var = kar+tar)) wont if they have value instead do ((var=kar+tar))
-# TODO: 1) Amount Transaction Limit
-# 2) One more features
+# TODO: Problem in strings recognization
