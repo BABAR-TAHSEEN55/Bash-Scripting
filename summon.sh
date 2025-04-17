@@ -1,17 +1,18 @@
 #!/usr/bin/bash
 #Installing react with vite
-npm create vite@latest .
+npm create vite@latest . --silent -- --template react
 #uninstalling react & react-dom
 echo "Uninstalling react & react-dom"
-npm uninstall react react-dom
+npm uninstall react react-dom --silent
 # Installing react & react dom 18 version
 
 echo "Installing react & react-dom 18 version"
-npm i react@18 react-dom@18
+npm i react@18 react-dom@18 --silent
 # Installing Tailwind
 echo "Installing tailwindcss"
-npm install -D tailwindcss@3 postcss autoprefixer
-npx tailwindcss init -p
+#--silent flag doesn't work with npx
+npm install -D tailwindcss@3 postcss autoprefixer &>/dev/null
+npx tailwindcss init -p &>/dev/null
 echo "copying breakpoints"
 cat <<EOF >tailwind.config.js
 /** @type {import('tailwindcss').Config} */
