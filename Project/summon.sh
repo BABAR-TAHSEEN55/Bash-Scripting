@@ -1,6 +1,12 @@
 #!/usr/bin/bash
 #Installing react with vite
-npm create vite@latest . --silent -- --template react
+extension="ts"
+read -p "Do you want to use TypeScript for your Project ? (y/N) " response
+if [[ "$response"=="y" ]]; then
+  npm create vite@latest . --silent -- --template react-${extension}
+else
+  npm create vite@latest . --silent -- --template react
+fi
 #uninstalling react & react-dom
 echo "Uninstalling react & react-dom"
 npm uninstall react react-dom --silent
@@ -58,4 +64,5 @@ const App = () => {
 };
 export default App;
 EOF
+echo "" >src/App.css
 npm run dev
