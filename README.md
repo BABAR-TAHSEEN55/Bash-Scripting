@@ -11,3 +11,4 @@ and you can find commands like ls , cat etc is a file
 - sudo -i
 - command -v
 - grep -r -i "github CLI" /home/lelouch/tech/ 1>/dev/null -> R stands for recursive find in directories and subdirectories
+  Command for find by excluding something : find ~/tech -path "\*/node_modules" -prune -o -type d -name "test" -print
