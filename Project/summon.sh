@@ -1,23 +1,24 @@
 #!/usr/bin/bash
 #Installing react with vite
-extension="ts"
+# extension="ts"
 read -p "Do you want to use TypeScript for your Project ? (y/N) " response
 if [[ "$response"=="y" ]]; then
-  npm create vite@latest . --silent -- --template react-${extension}
+  pnpm create vite@latest . --template react-ts
+  # pnpm create vite@latest . --template react-${extension}
 else
-  npm create vite@latest . --silent -- --template react
+  pnpm create vite@latest . --template react
 fi
-#uninstalling react & react-dom
+#uninstalling react & react-dom as react-19 is not stable yet
 echo "Uninstalling react & react-dom"
-npm uninstall react react-dom --silent
+pnpm uninstall react react-dom
 # Installing react & react dom 18 version
 
 echo "Installing react & react-dom 18 version"
-npm i react@18 react-dom@18 --silent
+pnpm i react@18 react-dom@18
 # Installing Tailwind
 echo "Installing tailwindcss"
 #--silent flag doesn't work with npx
-npm install -D tailwindcss@3 postcss autoprefixer &>/dev/null
+pnpm install -D tailwindcss@3 postcss autoprefixer &>/dev/null
 npx tailwindcss init -p &>/dev/null
 echo "copying breakpoints"
 cat <<EOF >tailwind.config.js
@@ -65,4 +66,4 @@ const App = () => {
 export default App;
 EOF
 echo "" >src/App.css
-npm run dev
+pnpm run dev
